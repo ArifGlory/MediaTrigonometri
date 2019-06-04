@@ -16,9 +16,21 @@
 
   <script type="text/javascript">
     $(document).ready(function(){
-    	//initialize the javascript
-    	App.init();
-    	App.dashboard2();
+    
+      
+      console.log("tess");
+      $('#btnNext').on('click', function () {
+        <?php
+        // $isiMateri = $materi[0]->materi;
+        // $isiMateri = str_replace(array("\r\n", "\n"), "", $myField);
+        ?>
+        var materi    = "<?php echo $materi[0]->materi;  ?>";
+        var jmlMateri = <?php count($materi); ?>
+        // $('#result').load(namaMobil);
+        
+      	$('#isi-materi').append(materi);
+      
+      });
     });
   </script>
 

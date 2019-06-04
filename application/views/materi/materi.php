@@ -1,3 +1,5 @@
+
+
 <div class="am-content">
 	<div class="main-content">
 		<div class="page-head">
@@ -17,13 +19,12 @@
 								<span class="icon s7-angle-right-circle"></span>
 							</a>
 
-						</div><span class="title">Nama Materi</span>
+						</div><span class="title" id="judul-materi"><?php echo $materi[0]->judul; ?></span>
 					</div>
 					<div class="panel-body">
-						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur recusandae a mollitia
-							magni in. </p>
-						<p>Velit numquam possimus eum delectus maiores dicta perspiciatis quae aperiam dolores facere,
-							doloribus non, iusto, sit.</p>
+						<div id="isi-materi">
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -39,7 +40,7 @@
 								<button type="button" class="btn btn-default"><i class="icon s7-angle-left-circle"></i> Previous</button>
 							</div>
 							<div class="col-md-6 text-center">
-								<button type="button" class="btn btn-default"><i class="icon s7-angle-right-circle"></i> Next</button>
+								<button type="button" id="btnNext" class="btn btn-default"><i class="icon s7-angle-right-circle"></i> Next</button>
 							</div>
 						</div>
 						<br>

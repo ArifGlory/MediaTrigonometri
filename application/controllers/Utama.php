@@ -14,6 +14,7 @@ class Utama extends CI_Controller
         parent::__construct();
         $this->load->helper(array('url'));
         $this->load->library(array('form_validation','pagination','session'));
+        $this->load->model('The_Model');
     }
 
     function index(){
@@ -33,6 +34,7 @@ class Utama extends CI_Controller
 
     function materi(){
         $data['tanggal']    = date('d-F-Y');
+        $data['materi']     = $this->The_Model->get_materi()->result(); 
 
         $this->load->view('parts/header');
         $this->load->view('parts/sidebar');
