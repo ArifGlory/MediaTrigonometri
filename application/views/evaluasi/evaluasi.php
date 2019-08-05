@@ -1,8 +1,5 @@
-
-
 <div class="am-content bgimg">
 	<div class="main-content">
-	
 		<div class="page-head">
 			<h2>Evaluasi</h2>
 			<ol class="breadcrumb">
@@ -20,7 +17,7 @@
 							<a href="ui-panels.php.html#">
 								<span class="icon s7-angle-right-circle"></span>
 							</a>
-						</div><span class="title" id="nomor_soal">Soal ke : 1 </span>
+						</div><span class="title" id="nomor_soal">Soal </span>
 					</div>
 					<div class="panel-body">
 						<br><br>
