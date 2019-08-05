@@ -32,6 +32,13 @@ class Utama extends CI_Controller
         $this->load->view('parts/footer');
     }
 
+    function skkd(){
+        $this->load->view('parts/header');
+        $this->load->view('parts/sidebar');
+        $this->load->view('kikd/kikd');
+        $this->load->view('parts/footer');
+    }
+
     function materi(){
         $data['tanggal']    = date('d-F-Y');
         $data['materi']     = $this->The_Model->get_materi()->result(); 
@@ -40,6 +47,57 @@ class Utama extends CI_Controller
         $this->load->view('parts/sidebar');
         $this->load->view('materi/materi',$data);
         $this->load->view('parts/footer');
+    }
+
+    function evaluasi(){
+        $data['soal']     = $this->The_Model->getEvaluasi()->result(); 
+
+        $this->load->view('parts/header');
+        $this->load->view('parts/sidebar');
+        $this->load->view('evaluasi/evaluasi',$data);
+        $this->load->view('parts/footer');
+    }
+
+    function tesMateri(){
+        $data['tanggal']    = date('d-F-Y');
+        $data['materi']     = $this->The_Model->get_materi()->result(); 
+
+        $this->load->view('parts/header');
+        $this->load->view('parts/sidebar');
+        $this->load->view('materi/tes_materi',$data);
+        $this->load->view('parts/footer');
+    }
+
+    function koreksi(){
+        $data = $_POST;
+        $listJawaban = $data['data'];
+
+        $soal       = $this->The_Model->getEvaluasi()->result(); 
+        $no         = 0;
+        $skor       = 0;
+        foreach($soal as $val){
+            $jawban_benar = $val->jawaban_benar;
+            if($jawban_benar == $listJawaban[$no]){
+                $skor+=10;
+            }
+           
+            $no++;
+        }
+
+        $this->The_Model->result($listJawaban,$skor);
+    }
+
+    function hasil(){
+        $session                = $this->session->userdata();
+        $data['skor']           = $session['skor'];
+        $data['listJawaban']    = $session['listJawaban'];
+        $data['soal']           = $this->The_Model->getEvaluasi()->result();  
+
+        $this->load->view('parts/header');
+        $this->load->view('parts/sidebar');
+        $this->load->view('evaluasi/result',$data);
+        $this->load->view('parts/footer');
+       
     }
 
     function getHariIni(){

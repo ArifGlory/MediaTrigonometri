@@ -1,4 +1,4 @@
-<div class="am-content">
+<div class="am-content bgimg">
 	<div class="main-content">
 
 		<div class="row">
@@ -47,7 +47,7 @@
 						<p> Ujicoba kemampuan mu dengan tes evaluasi dan latihan soal</p>
                         <br>
                         <div class="text-center">
-                            <a class="btn btn-success btn-lg">Mulai</a>
+                            <a href="<?php echo base_url();?>Utama/evaluasi" class="btn btn-success btn-lg">Mulai</a>
                         </div>
 					</div>
 				</div>
@@ -64,12 +64,16 @@
 						<p> Pelajari SK / KD tentang materi ini</p>
                         <br><br>
                         <div class="text-center">
-                            <a class="btn btn-success btn-lg">Mulai</a>
+                            <a href="<?php echo base_url();?>Utama/skkd" class="btn btn-success btn-lg">Mulai</a>
                         </div>
 					</div>
 				</div>
 			</div>
 
 		</div>
+		<div class="row">
+			<img height="1000px">
+		</div>
+
 	</div>
 </div>

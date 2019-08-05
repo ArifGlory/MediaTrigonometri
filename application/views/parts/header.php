@@ -16,6 +16,85 @@
 	<link rel="stylesheet" type="text/css"
 		href="<?php echo base_url();?>assets/lib/theme-switcher/theme-switcher.min.css" />
 	<link type="text/css" href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+	<script src="<?php echo base_url();?>assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+  	<script src="<?php echo base_url();?>assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+ 	 <script src="<?php echo base_url();?>assets/js/main.js" type="text/javascript"></script>
+	  <style type="text/css">
+.bgimg {
+	background-image: url('<?php echo base_url();?>assets/img/green_landscape.jpg');
+	width:inline-block;
+	background-repeat: repeat-y;
+}
+
+/* Layout */
+/* .main {
+    display: flex;
+    padding: 2em;
+    height: 90vh;
+    justify-content: center;
+    align-items: middle;
+} */
+
+.clockbox,
+#clock {
+    width: 100%;
+}
+
+/* Clock styles */
+.circle {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.mid-circle {
+    fill: #000;
+}
+.hour-marks {
+    fill: none;
+    stroke: #000;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    /*transition: transform .5s ease-in-out;*/
+}
+
+</style>
+
 </head>
 
 <body>

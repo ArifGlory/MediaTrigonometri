@@ -17,38 +17,46 @@
 	<link rel="stylesheet" type="text/css"
 		href="<?php echo base_url();?>assets/lib/theme-switcher/theme-switcher.min.css" />
 	<link type="text/css" href="<?php echo base_url();?>assets/css/style.css" rel="stylesheet">
+	<style type="text/css">
+		.bgimg {
+			background-image: url('<?php echo base_url();?>assets/img/green_landscape.jpg');
+			width: inline-block;
+			background-repeat: repeat-y;
+		}
+	</style>
 </head>
 
 <body class="am-splash-screen">
 	<div class="am-wrapper am-login">
 		<div class="am-content">
-			<div class="main-content">
+			<div class="main-content bgimg">
 				<div class="login-container">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-                        <img src="<?php echo base_url();?>assets/img/logo_uin3.jpg" alt="logo" width="150px"
-								height="150px" class="img-circle">
-                                <span style="color:#ffffff;font-size:20px">Selamat Datang di</span>
-                                <span style="color:#ffffff;font-size:20px">Media Pembelajaran Trigonometri</span>
-                                </div>
+							<img src="<?php echo base_url();?>assets/img/logo_uin3.jpg" alt="logo" width="150px" height="150px"
+								class="img-circle">
+							<span style="color:#000000;font-size:20px">Selamat Datang di</span>
+							<span style="color:#000000;font-size:20px">Media Pembelajaran Trigonometri</span>
+						</div>
 						<div class="panel-body">
 							<form action="index.php" method="get" class="form-horizontal">
 								<div class="login-form">
 									<div class="form-group login-submit">
-										<a href="<?php echo base_url();?>Utama/dashboard"
-                                         class="btn btn-primary btn-lg" style="color:#ffffff">Masuk</a>
+										<a href="<?php echo base_url();?>Utama/dashboard" class="btn btn-primary btn-lg"
+											style="color:#ffffff">Masuk</a>
 									</div>
-									
 								</div>
 							</form>
 						</div>
 					</div>
+					<img height="140px">
 				</div>
 			</div>
 		</div>
 	</div>
 	<script src="<?php echo base_url();?>assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-	<script src="<?php echo base_url();?>assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js" type="text/javascript"></script>
+	<script src="<?php echo base_url();?>assets/lib/jquery.nanoscroller/javascripts/jquery.nanoscroller.min.js"
+		type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/js/main.js" type="text/javascript"></script>
 	<script src="<?php echo base_url();?>assets/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
@@ -62,6 +70,6 @@
 			App.livePreview();
 		});
 	</script>
-	
-	
+
+
 </body>

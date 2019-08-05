@@ -14,4 +14,25 @@ class The_Model extends CI_Model
         $data = $this->db->get($this->tb_materi);
         return $data;
     }
+
+    function getEvaluasi(){
+        $data = $this->db->get("tb_soal");
+        return $data;
+    }
+
+    function result($listJawaban,$skor){
+        $session = array(
+            'listJawaban' => $listJawaban,
+            'skor'      => $skor
+        );
+        $this->session->set_userdata($session);
+        $redirect       =  base_url()."Utama/hasil";
+
+        $response['status']     = "success";
+        $response['message']    = "berhasil";
+        $response['redirect']   = $redirect;
+
+        $response = json_encode($response);
+        echo $response;
+    }
 }
