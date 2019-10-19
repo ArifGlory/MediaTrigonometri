@@ -1,6 +1,8 @@
-<div>
-	<img id="imgIlustrasi"src="<?php echo base_url();?>assets/img/trigono_1.jpg" class="img-rounded" width="400px"
-		height="400px">
+<div class="text-left" style="padding: 5%">
+	<div class="text-center">
+		<img id="imgIlustrasi"src="<?php echo base_url();?>assets/img/trigono_1.jpg" class="img-rounded" width="400px"
+			 height="400px">
+	</div>
 	<br><br><br>
 	<p class="text-left">
     Trigonometri merupakan pelajaran yang bersifat abstrak. Trigonometri dalam bahasa Yunani yaitu 

@@ -1,6 +1,6 @@
-<div>
+<div class="text-left" style="padding: 5%">
 	<!-- load html dinamicly in here with jquery -->
-	<div class="page-head">
+	<div class="page-head text-center">
 		<ol class="breadcrumb">
 			<li><a href="#ukuran_derajat">Ukuran Derajat</a></li>
 			<li><a href="#ukuran_radian">Ukuran Radian</a></li>
@@ -48,32 +48,66 @@
 			</div>
 		</div>
 		<br>
+		<div>
+			<h4>Mari kita praktekkan !</h4>
+			<p class="text-left">Perhatikan jam dibawah ini, Kamu dapat menyalakan dan stop jam ini dengan tombol yang ada disampingnya
+			<br>
+			Perhatikan ketika jam nya di stop, maka kita akan mendapatkan satuan derajat dari Jarum Jam,Jarum Menit, dan jarum detik dari jam ini.
+			</p>
+			<p class="text-left"> </p>
+		</div>
 		<div class="col-md-12">
-			<div class="col-md-2"></div>
-			<div class="col-md-8">
-				<div class="clockbox">
-						<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-							<g id="face">
-								<circle class="circle" cx="300" cy="300" r="253.9"/>
-								<path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
-								<circle class="mid-circle" cx="300" cy="300" r="16.2"/>
-							</g>
-							<g id="jarumJam">
-								<path class="hour-arm" d="M300.5 298V142"/>
-								<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-							</g>
-							<g id="jarumMenit">
-								<path class="minute-arm" d="M300.5 298V67"/>
-								<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-							</g>
-							<g id="jarumDetik">
-								<path class="second-arm" d="M300.5 350V55"/>
-								<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-							</g>
-						</svg>
-					</div><!-- .clockbox -->
+			<div class="col-md-3">
+				<br><br><br><br><br><br><br><br><br><br><br><br>
+				<button id="btnStart" class="btn btn-rounded btn-lg btn-alt1"><i class="icon icon-left s7-play"></i> Start</button>
+				<br><br><br>
+				<div class="panel panel-full-alt3" style="width:150px;">
+					<div class="panel-body text-center">
+						<h4 id="jam">Jam 	= </h4>
+						<h4 id="menit">Menit 	= </h4>
+						<h4 id="detik">Detik 	= </h4>
+					</div>
 				</div>
-			<div class="col-md-2"></div>
+			</div>
+			<div class="col-md-6">
+			<div class="clockbox">
+					<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+						<g id="face">
+							<circle class="circle" cx="300" cy="300" r="253.9"/>
+							<path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
+							<circle class="mid-circle" cx="300" cy="300" r="16.2"/>
+						</g>
+						<g id="hour">
+							<path class="hour-arm" d="M300.5 298V142"/>
+							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						</g>
+						<g id="minute">
+							<path class="minute-arm" d="M300.5 298V67"/>
+							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						</g>
+						<g id="second">
+							<path class="second-arm" d="M300.5 350V55"/>
+							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
+						</g>
+					</svg>
+				</div><!-- .clockbox -->
+			</div>
+			<div class="col-md-2">
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+				<button id="btnStop" class="btn btn-rounded btn-lg btn-primary"><i class="icon icon-left s7-power"></i> Stop</button>
+				<br><br><br>
+				<div class="panel panel-full-alt3" style="width:150px;">
+					<div class="panel-heading">
+						<h3>Derajat</h3>
+					</div>
+					<div class="panel-body text-center">
+						<h4 id="deg_jam">Jam 	= </h4>
+						<h4 id="deg_menit">Menit 	= </h4>
+						<h4 id="deg_detik">Detik 	= </h4>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-1"></div>
 		</div>
 	</div>
 	<div>
@@ -142,7 +176,7 @@
 					</div>
 					<div class="panel-body">
 						<p class="text-left">
-							Jam Analog disamping berada pada posisi jam 9.30 tepat.
+							Jam Analog disamping berada pada posisi jam 9.00 tepat.
 							<br>
 							yang berarti jam tersebut berada pada <strong>Sudut 45°</strong>
 							<br>
@@ -154,27 +188,8 @@
 				</div>
 			</div>
 			<div class="col-md-6">
-				<div class="clockbox">
-					<svg id="clock" xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
-						<g id="face">
-							<circle class="circle" cx="300" cy="300" r="253.9"/>
-							<path class="hour-marks" d="M300.5 94V61M506 300.5h32M300.5 506v33M94 300.5H60M411.3 107.8l7.9-13.8M493 190.2l13-7.4M492.1 411.4l16.5 9.5M411 492.3l8.9 15.3M189 492.3l-9.2 15.9M107.7 411L93 419.5M107.5 189.3l-17.1-9.9M188.1 108.2l-9-15.6"/>
-							<circle class="mid-circle" cx="300" cy="300" r="16.2"/>
-						</g>
-						<g id="hour">
-							<path class="hour-arm" d="M300.5 298V142"/>
-							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-						</g>
-						<g id="minute">
-							<path class="minute-arm" d="M300.5 298V67"/>
-							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-						</g>
-						<g id="second">
-							<path class="second-arm" d="M300.5 350V55"/>
-							<circle class="sizing-box" cx="300" cy="300" r="253.9"/>
-						</g>
-					</svg>
-				</div><!-- .clockbox -->
+				<!-- gambar jam 9 disini -->
+				<img src="<?php echo base_url();?>assets/img/9clock.gif" class="img-rounded" width="400px" height="400px">
 			</div>
 		</div>
 	</div>
@@ -185,14 +200,14 @@ const HOURHAND = document.querySelector('#hour');
 const MINUTEHAND = document.querySelector("#minute");
 const SECONDHAND = document.querySelector("#second");
 
-const jarumJam = document.querySelector('#jarumJam');
-const jarumMenit = document.querySelector("#jarumMenit");
-const jarumDetik = document.querySelector("#jarumDetik");
+var date = new Date();
+ let hr = date.getHours();
+ let min = date.getMinutes();
+ let sec = date.getSeconds();
+ var interval;
 
 
- let hr = 9;
- let min = 0;
- let sec = 0;
+ //console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
 
 let hrPosition = hr*360/12 + ((min * 360/60)/12) ;
 let minPosition = (min * 360/60) + (sec* 360/60)/60;
@@ -202,28 +217,59 @@ HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
 MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
 SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 
-jarumJam.style.transform = "rotate(" + hrPosition + "deg)";
-jarumMenit.style.transform = "rotate(" + minPosition + "deg)";
-jarumDetik.style.transform = "rotate(" + secPosition + "deg)";
 
-//var interval = setInterval(run_the_clock, 1000);
 
 function run_the_clock(){
  var date = new Date();
- let hr2 = date.getHours();
- let min2 = date.getMinutes();
- let sec2 = date.getSeconds();
- console.log("Hour: "+hr2+ " Minute: "+ min2 + " Second: "+ sec2);
+ let hr = date.getHours();
+ let min = date.getMinutes();
+ let sec = date.getSeconds();
+ //console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
 
- let hrPosition2 = hr2*360/12 + ((min2 * 360/60)/12) ;
- let minPosition2 = (min2 * 360/60) + (sec2* 360/60)/60;
- let secPosition2 = sec2 * 360/60;
+ hrPosition = hr*360/12 + ((min * 360/60)/12) ;
+ minPosition = (min * 360/60) + (sec* 360/60)/60;
+ secPosition = sec * 360/60;
 
  //Then we need to apply these numbers as degrees in the inline   styles for transform on each of the objects.
- jarumJam.style.transform = "rotate(" + hrPosition2 + "deg)";
- jarumMenit.style.transform = "rotate(" + minPosition2 + "deg)";
- jarumDetik.style.transform = "rotate(" + secPosition2 + "deg)";
+ HOURHAND.style.transform = "rotate(" + hrPosition + "deg)";
+ MINUTEHAND.style.transform = "rotate(" + minPosition + "deg)";
+ SECONDHAND.style.transform = "rotate(" + secPosition + "deg)";
 }
+
+$("#btnStart").on("click",function(){
+	interval = setInterval(run_the_clock, 1000);
+});
+$("#btnStop").on("click",function(){
+	console.log("stop di klik");
+	//interval = setInterval(run_the_clock, 0);
+	var date = new Date();
+ 	let hr = date.getHours();
+	let min = date.getMinutes();
+ 	let sec = date.getSeconds();
+
+	let stopHr = hrPosition;
+	let stopMin = minPosition;
+	let stopSec = secPosition;
+
+	HOURHAND.style.transform = "rotate(" + stopHr + "deg)";
+	MINUTEHAND.style.transform = "rotate(" + stopMin + "deg)";
+ 	SECONDHAND.style.transform = "rotate(" + stopSec + "deg)";
+
+	 console.log("Hour: "+hr+ " Minute: "+ min + " Second: "+ sec);
+	 console.log("Derajat Hour: "+stopHr+ "derajat Minute: "+ stopMin + "derajat Second: "+ stopSec);
+
+	 $("#jam").text("Jam 	= "+hr);
+	 $("#menit").text("Menit 	= "+min);
+	 $("#detik").text("Detik 	= "+sec);
+
+	 $("#deg_jam").text("Jam 	= "+stopHr+"°");
+	 $("#deg_menit").text("Menit 	= "+stopMin+"°");
+	 $("#deg_detik").text("Detik 	= "+stopSec+"°");
+
+	 clearInterval(interval); 
+	
+	
+});
 
 function stop(){
 	

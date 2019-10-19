@@ -46,7 +46,7 @@
 						<br>
 						<div class="row">
 							<div class="col-md-12 text-center">
-							<button type="button" class="btn btn-default"><i class="icon s7-home"></i> Materi awal</button>
+							<button id="btnHome" type="button" class="btn btn-default"><i class="icon s7-home"></i> Materi awal</button>
 							</div>
 						</div>
 					</div>
@@ -68,7 +68,7 @@
 
 		$("#btnNext").on("click",function(){
 			console.log("next");
-			c++;
+			c++;btnPrevious
 			$("#judul_materi").text(materi[c]['judul']);
 			$("#isi_materi").load("<?php echo base_url(); ?>/"+materi[c]['url_materi']);
 		});
@@ -78,5 +78,11 @@
 			$("#judul_materi").text(materi[c]['judul']);
 			$("#isi_materi").load("<?php echo base_url(); ?>/"+materi[c]['url_materi']);
 		});
+        $("#btnHome").on("click",function(){
+            console.log("home");
+            c = 0;
+            $("#judul_materi").text(materi[c]['judul']);
+            $("#isi_materi").load("<?php echo base_url(); ?>/"+materi[c]['url_materi']);
+        });
 	});
 </script>

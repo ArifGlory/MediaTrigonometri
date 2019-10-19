@@ -28,6 +28,18 @@ class Materi extends CI_Controller
     function jamAnalog(){
         $this->load->view('materi/jam_analog');
     }
+    
+    function perbandinganTrigonometriDenganSegitiga(){
+		$this->load->view('materi/perbandingan_trigonometri');
+	}
+
+	function perbandinganTrigonometriDenganSudutIstimewa(){
+		$this->load->view('materi/perbandingan_trigonometri_sudut_istimewa');
+	}
+
+	function perbandinganTrigonometriBerbagaiKuadran(){
+		$this->load->view('materi/perbandingan_trigonometri_berbagai_kuadran');
+	}
 
   
 }
