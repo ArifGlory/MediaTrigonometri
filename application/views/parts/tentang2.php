@@ -30,7 +30,7 @@
 								<h3>Nama</h3>
 								<label>Ulfa Asyifaa</label>
 								<h3>Tempat, Tanggal Lahir</h3>
-								<label>Tulang bawang, 11 Februau 1994</label>
+								<label>Tulang bawang, 11 Februari 1994</label>
 								<br>
 								<h3>Fakultas & Jurusan</h3>
 								<label>Fakultas tarbiyah dan keguruan</label>

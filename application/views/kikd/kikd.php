@@ -6,7 +6,7 @@
 			<h2>SK / KD</h2>
 			<ol class="breadcrumb">
 				<li><a href="<?php echo base_url();?>Utama/dashboard">Home</a></li>
-				<li class="active">SK / KD</li>
+				<li class="active">KI / KD</li>
 			</ol>
 		</div>
 		<br><br>
