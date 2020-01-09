@@ -32,6 +32,17 @@ class Utama extends CI_Controller
         $this->load->view('parts/footer');
     }
 
+	function tentang(){
+
+		$data['tanggal']    = date('d-F-Y');
+		$data['nama_hari']  = $this->getHariIni();
+
+		$this->load->view('parts/header');
+		$this->load->view('parts/sidebar');
+		$this->load->view('parts/tentang2',$data);
+		$this->load->view('parts/footer');
+	}
+
     function skkd(){
         $this->load->view('parts/header');
         $this->load->view('parts/sidebar');
